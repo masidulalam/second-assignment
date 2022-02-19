@@ -7,35 +7,18 @@
      common style
 --------------------*/
 body{
-    margin: 80px 120px;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
 }
 
-/*----------------------
-    navigation bar
-------------------------*/
-/* .navigation{
-    display: flex;
-    flex-direction: ;
-    justify-content: space-between;
-    align-items: center;
-} */
-/* .heading h1{
-    font-size: 24px;
-    font-weight: bold;
-} */
-/* .nav-name{
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-column-gap: 34px;
-} */
-/* .nav-name a{
-    text-decoration: none;
-    font-size: 16px;
-    color: black;
-} */
-/* .fa-magnifying-glass-dollar{
-    color: red;
-} */
+.header, 
+.top-section, 
+.company-logo, 
+.populer-collection,
+.see-more,
+.featured-products{
+    padding: 60px;
+}
 
 /*-----------------------
       first section
@@ -44,16 +27,19 @@ body{
 .top-section{
     display: flex;
     justify-content: space-between;
-    margin-top: 80px;
+    
     align-items: center;
     
 }
-.text-container{
-    width:  40%;
+.top-section-text{
+    width:  50%;
 }
-.text-container h1{
+.top-section-text h1{
     font-size: 52px;
     font-weight: bold;
+}
+.top-section-img img{
+    width: 100%;
 }
 .button{
     display: flex;
@@ -77,14 +63,15 @@ body{
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     margin-top: 80px;
-    grid-column-gap: 2px;
+    
 }
-.text-center{
-    text-align: center;
-}
-.populer-collection{
-    margin-top: 80px;
-}
+
+/*-----------------------------
+      populer collction  
+------------------------------*/
+
+
+
 .collections{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -99,56 +86,66 @@ body{
 .collection img{
     width: 100%;
 }
+.collection-price{
+    font-weight: bold;
+}
+.ratings-color{
+    color: #FB8200;
+}
+.ratings span{
+    font-weight: 800;
+}
 
 /*-------------------
    see more
 ---------------------*/
 .see-more{
-    
-    margin-top: 80px;
     display: flex;
     justify-content: flex-end;
+}
+.see-more-width{
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .see-more-color{
     color: #E02C6D;
 }
 .see-more a{
     text-decoration: none;
+    font-size: 16px;
 }
 
 /*---------------------------
      featured products
 ----------------------------*/
 .featured-products{
-    margin-top: 80px;
+    /* margin-top: 80px; */
     display: flex;
-    /* flex-direction: row; */
-}
-.featured-text{
-
-    margin-left: 50px;
 }
 .featured-img img{
     width: 100%;
 }
+.featured-text{
+    margin-left: 50px;
+}
+
 
 
 
 /*-------------------------
        footer start
 --------------------------*/
-footer{
-    margin-top: 80px;
-    margin-bottom: 0;
+.footer-text{
     height: 239px;
     background-color: black;
-}
-.influencer-product{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
 .font-color{
     color: white;
 }
@@ -157,54 +154,120 @@ footer{
           media quary starts
 -----------------------------------*/
 @media only screen and (max-width:688px){
-    body{
-        margin: 15px;
+/*----------------------------
+-------mobile device----------
+-----------------------------*/
+   .container{
+       width: 100%;
+   }
+   .header, 
+   .top-section, 
+   .company-logo, 
+   .populer-collection,
+   .featured-products{
+    padding: 10px;
+}
+   .top-section{
+       display: flex;
+       flex-direction: column;
+   }
+   
+   .top-section-text {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       width: 100%;
+   }
+   #top-section-text-order{
+       order: 1;
+   }
+   .company-logo{
+       display: grid;
+       grid-template-columns: repeat(3, 1fr);
+       grid-row-gap: 40px;
+       
+
+   }
+   .collections{
+       display: grid;
+       grid-template-columns: 1fr;
+       
+   }
+   .featured-products{
+       display: flex;
+       flex-direction: column;
+   }
+   .featured-text{
+       margin-bottom: 40px;
+       margin-left: 0;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+   }
+   #featured-img-order{
+       order: 1;
+   }
+   .text-center{
+    text-align: center;
+}
+    
+}
+/*--------------------------
+       tablet device
+---------------------------*/
+@media only screen and (min-width: 688px) and (max-width:992px){
+    .container{
+        width: 100%;
     }
+    .header, 
+    .top-section, 
+    .company-logo, 
+    .populer-collection,
+    .featured-products{
+     padding: 20px;
+ }
     .top-section{
         display: flex;
         flex-direction: column;
-        align-items: center;
     }
-    .text-container{
+    
+    .top-section-text {
         width: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-    }
-    #order1{
-        order: 1;
-    }
-    .img-container img{
-        width: 100%;
+        justify-content: center;
     }
     .company-logo{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-row-gap: 20px;
+        grid-row-gap: 50px;
+        
+ 
     }
     .collections{
         display: grid;
         grid-template-columns: 1fr;
+        
     }
     .featured-products{
+        display: flex;
+        flex-direction: column;
+    }
+    .featured-text{
+        margin-bottom: 40px;
+        margin-left: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    .featured-text{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-left: 0;
-        margin-bottom: 80px;
+    #featured-img-order{
+        order: 1;
     }
-    #featured-item-order{
-        order: 2;
+    .text-center{
+        text-align: center;
     }
-    .featured-img img{
-        width: 100%;
-    }
-    
 }
