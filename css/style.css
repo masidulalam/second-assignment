@@ -3,6 +3,7 @@
 -------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
 
+
 /*-------------------
      common style
 --------------------*/
@@ -10,26 +11,22 @@ body{
     font-family: 'Poppins', sans-serif;
     margin: 0;
 }
-
 .header, 
 .top-section, 
 .company-logo, 
 .populer-collection,
-.see-more,
 .featured-products{
     padding: 60px;
 }
 
+
 /*-----------------------
       first section
 -----------------------*/
-
 .top-section{
     display: flex;
     justify-content: space-between;
-    
     align-items: center;
-    
 }
 .top-section-text{
     width:  50%;
@@ -42,36 +39,43 @@ body{
     width: 100%;
 }
 .button{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 196px;
-    padding: 10px 35px;
     background-color: #E02C6D;
-    border-radius: 41px
+    display: inline;
+    justify-content: space-between;
+    padding: 8px 35px;
+    border-radius: 41px;
+    
 }
 .button a{
     text-decoration: none;
+    margin-right: 10px;
+}
+.button-font-color{
     color: white;
     font-size: 20px;
 }
+.button-area:hover .button{
+    background-color: green;
+    /* transition: background-color ; */
+    transition: background-color 0.5s;
+}
 
-/*---------------------
-    company logo
+
+/*----------------------
+     company logo
 -----------------------*/
 .company-logo{
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    margin-top: 80px;
-    
+    grid-template-columns: repeat(7, 1fr);   
 }
 
+
 /*-----------------------------
-      populer collction  
+       populer collction  
 ------------------------------*/
-
-
-
+.populer-collection h2{
+    text-align: center;
+}
 .collections{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -83,7 +87,7 @@ body{
     padding: 10px;
     box-shadow: 5px 5px 20px gray;
 }
-.collection img{
+.collection-img img{
     width: 100%;
 }
 .collection-price{
@@ -92,14 +96,17 @@ body{
 .ratings-color{
     color: #FB8200;
 }
+
 .ratings span{
     font-weight: 800;
 }
 
+
 /*-------------------
-   see more
+      see more
 ---------------------*/
 .see-more{
+    margin-top: 40px;
     display: flex;
     justify-content: flex-end;
 }
@@ -117,12 +124,14 @@ body{
     font-size: 16px;
 }
 
+
 /*---------------------------
      featured products
 ----------------------------*/
 .featured-products{
-    /* margin-top: 80px; */
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .featured-img img{
     width: 100%;
@@ -130,8 +139,6 @@ body{
 .featured-text{
     margin-left: 50px;
 }
-
-
 
 
 /*-------------------------
@@ -145,17 +152,23 @@ body{
     justify-content: center;
     align-items: center;
 }
-
-.font-color{
+.footer-font-color{
     color: white;
 }
+.contruct-us{
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+}
 
-/*---------------------------------
-          media quary starts
+
+/*----------------------------------
+----------media quary starts--------
 -----------------------------------*/
 @media only screen and (max-width:688px){
+
 /*----------------------------
--------mobile device----------
+         mobile devices
 -----------------------------*/
    .container{
        width: 100%;
@@ -166,10 +179,11 @@ body{
    .populer-collection,
    .featured-products{
     padding: 10px;
-}
+   }
    .top-section{
        display: flex;
        flex-direction: column;
+       margin-bottom: 50px;
    }
    
    .top-section-text {
@@ -179,43 +193,51 @@ body{
        justify-content: center;
        width: 100%;
    }
+   .top-section-text h1{
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+   }
    #top-section-text-order{
        order: 1;
    }
    .company-logo{
        display: grid;
        grid-template-columns: repeat(3, 1fr);
-       grid-row-gap: 40px;
-       
-
+       grid-row-gap: 30px;
+       margin-bottom: 30px;
    }
    .collections{
        display: grid;
        grid-template-columns: 1fr;
-       
-   }
+    }
+    .see-more{
+        margin-top: 20px;
+    }
    .featured-products{
        display: flex;
        flex-direction: column;
+       margin-top: 20px;
+       margin-bottom: 50px;
    }
    .featured-text{
-       margin-bottom: 40px;
+       margin-bottom: 30px;
        margin-left: 0;
        display: flex;
        flex-direction: column;
        justify-content: center;
        align-items: center;
    }
+   .featured-text h1{
+       text-align: center;
+   }
    #featured-img-order{
        order: 1;
-   }
-   .text-center{
-    text-align: center;
+   }  
 }
-    
-}
+
 /*--------------------------
-       tablet device
+       tablet devices
 ---------------------------*/
 @media only screen and (min-width: 688px) and (max-width:992px){
     .container{
@@ -227,10 +249,14 @@ body{
     .populer-collection,
     .featured-products{
      padding: 20px;
- }
+    }
     .top-section{
         display: flex;
         flex-direction: column;
+        margin-bottom: 50px;
+    }
+    #top-section-text-order{
+        order: 1;
     }
     
     .top-section-text {
@@ -240,12 +266,15 @@ body{
         align-items: center;
         justify-content: center;
     }
+    .top-section-text h1{
+        text-align: center;
+        font-size: 45px;
+        font-weight: bold;
+    }
     .company-logo{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-row-gap: 50px;
-        
- 
     }
     .collections{
         display: grid;
@@ -266,8 +295,5 @@ body{
     }
     #featured-img-order{
         order: 1;
-    }
-    .text-center{
-        text-align: center;
     }
 }
